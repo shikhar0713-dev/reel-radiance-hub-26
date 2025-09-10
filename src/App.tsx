@@ -18,8 +18,8 @@ const App = () => (
       <Sonner />
 
       {/* Example header with Clerk */}
-      <header className="p-4 border-b flex justify-between">
-        <h1 className="text-xl font-bold">Reel Radiance Hub</h1>
+      {/* <header className="p-4 border-b flex justify-between">
+        <h1 className="text-xl font-bold">CineMatch</h1>
         <div>
           <SignedOut>
             <SignInButton />
@@ -28,7 +28,7 @@ const App = () => (
             <UserButton />
           </SignedIn>
         </div>
-      </header>
+      </header> */}
 
       <BrowserRouter>
         <Routes>

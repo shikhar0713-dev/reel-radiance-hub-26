@@ -2,8 +2,9 @@ import React from 'react';
 import { Search, Menu, Film } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-
+import {useClerk} from '@clerk/clerk-react';
 export const Header: React.FC = () => {
+  const { openSignIn } =useClerk();
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 py-4">
@@ -34,7 +35,13 @@ export const Header: React.FC = () => {
                 className="pl-10 w-64 bg-card border-primary/20 focus:border-primary"
               />
             </div>
-            <Button variant="cinema" size="sm">Sign In</Button>
+             <Button 
+              variant="cinema" 
+              size="sm" 
+              onClick={() => openSignIn({})}
+            >
+          Sign In
+            </Button>
             <Button variant="ghost" size="icon" className="md:hidden">
               <Menu className="w-4 h-4" />
             </Button>
